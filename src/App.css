@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: abyss --default, dark --prefersdark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bookmark-icon {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+}
