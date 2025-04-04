@@ -22,7 +22,7 @@ function App() {
       </section>
       <section className="bg-base-200">
         <h1 id="drama" className="px-4 pt-8 text-lg font-bold">
-          Korean Drama
+          K-Drama
         </h1>
         <Drama />
       </section>
