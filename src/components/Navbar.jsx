@@ -71,7 +71,7 @@ function Navbar() {
               <a href="/#drama">Drama</a>
             </li>
             <li>
-              <Link to="/bookmark">Bookmark</Link>
+              <Link to="/bookmark">Bookmarks</Link>
             </li>
           </ul>
         </div>
@@ -91,7 +91,7 @@ function Navbar() {
             <a href="/#drama">Drama</a>
           </li>
           <li>
-            <Link to="/bookmark">Bookmark</Link>
+            <Link to="/bookmark">Bookmarks</Link>
           </li>
         </ul>
       </div>
