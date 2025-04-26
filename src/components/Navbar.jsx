@@ -75,7 +75,7 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost text-xl">
+        <Link to="/" className="btn btn-ghost hover:bg-transparent text-xl">
           Watchathon!
         </Link>
       </div>
@@ -97,7 +97,7 @@ function Navbar() {
       </div>
       <div className="navbar-end">
         <div className="dropdown dropdown-end">
-          <button className="btn btn-ghost btn-circle">
+          <button className="btn btn-ghost btn-circle hover:bg-transparent">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"

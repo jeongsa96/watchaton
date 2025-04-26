@@ -4,11 +4,14 @@ import Icon from "../components/BookmarkIcon";
 function Bookmark() {
   const { bookmarks } = useMovieContext();
 
-  if (!bookmarks) {
+  if (bookmarks == 0) {
     return (
-      <div className="text-2xl font-extrabold text-white text-center">
-        Bookmarks
-      </div>
+      <section className="bg-base-100">
+        <h1 className="px-4 pt-20 text-lg font-bold">Your Bookmarks</h1>
+        <h1 className="px-4 pt-2 text-md font-normal">
+          No Bookmarked movies yet.
+        </h1>
+      </section>
     );
   } else {
     return (

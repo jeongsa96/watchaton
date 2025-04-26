@@ -2,11 +2,12 @@ import { createContext, useState, useContext, useEffect } from "react";
 
 const MovieContext = createContext();
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useMovieContext = () => useContext(MovieContext);
 
 export const MovieProvider = ({ children }) => {
-  const [bookmarks, setBookmarks] = useState(()=>{
-    return JSON.parse(localStorage.getItem("bookmarks")) || []
+  const [bookmarks, setBookmarks] = useState(() => {
+    return JSON.parse(localStorage.getItem("bookmarks")) || [];
   });
 
   useEffect(() => {
@@ -15,12 +16,12 @@ export const MovieProvider = ({ children }) => {
 
   const addToBookmarks = (movie) => {
     setBookmarks((prev) => [...prev, movie]);
-    console.log("movies: ", localStorage.getItem("bookmarks"))
+    console.log("movies: ", localStorage.getItem("bookmarks"));
   };
-  
+
   const removeFromBookmarks = (movieId) => {
     setBookmarks((prev) => prev.filter((movie) => movie.id !== movieId));
-    console.log("movies: ", localStorage.getItem("bookmarks"))
+    console.log("movies: ", localStorage.getItem("bookmarks"));
   };
 
   const isBookmarked = (movieId) => {
