@@ -16,6 +16,16 @@ function Home() {
       <section className="bg-base-200 my-12">
         <Daftar/>      
       </section>
+<<<<<<< HEAD
+=======
+      <section className="bg-base-200">
+        <h1 id="drama" className="px-4 pt-8 text-lg font-bold">
+          K-Drama
+        </h1>
+        <Drama />
+      </section>
+      <Footer />
+>>>>>>> f331993012bf2a4af7962d1542a15935ed28e894
       <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     </>
   );
