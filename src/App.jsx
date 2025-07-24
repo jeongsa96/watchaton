@@ -1,19 +1,25 @@
-import React from "react";
 import Home from "./pages/Home";
-import Bookmark from "./pages/Bookmark";
+import Galeri from "./pages/Galeri";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
-import { MovieProvider } from "./contexts/MovieContext";
+import { useEffect } from "react";
+import AOS from "aos";
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+  
   return (
-    <MovieProvider>
+    <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/bookmark" element={<Bookmark />} />
+        <Route path="/galeri" element={<Galeri />} />
       </Routes>
-    </MovieProvider>
+      <Footer />
+    </>
   );
 }
 

@@ -1,35 +1,24 @@
 import Hero from "../components/Hero";
-import Movie from "../components/Movies";
-import Series from "../components/Series";
-import Drama from "../components/Drama";
-import Footer from "../components/Footer";
+import Berita from "../components/Berita";
+import Daftar from "../components/Pendaftaran";
+import { beritaList } from "../data/Berita";
 
-function App() {
+function Home() {
   return (
     <>
       <Hero />
       <section className="bg-base-200">
-        <h1 id="movies" className="px-4 pt-8 text-lg font-bold">
-          Movies
+        <h1 className="pt-8 lg:mx-72 text-xl font-bold mx-6 my-6">
+          Berita
         </h1>
-        <Movie />
+        <Berita beritaList={beritaList} />      
       </section>
-      <section className="bg-base-200">
-        <h1 id="show" className="px-4 pt-8 text-lg font-bold">
-          TV Shows
-        </h1>
-        <Series />
+      <section className="bg-base-200 my-12">
+        <Daftar/>      
       </section>
-      <section className="bg-base-200">
-        <h1 id="drama" className="px-4 pt-8 text-lg font-bold">
-          Drama
-        </h1>
-        <Drama />
-      </section>
-      <Footer />
       <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     </>
   );
 }
 
-export default App;
+export default Home;
