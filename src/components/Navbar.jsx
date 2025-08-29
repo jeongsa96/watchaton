@@ -70,42 +70,55 @@ function Navbar() {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a href="/#movies">Movies</a>
+              <a href="/">Beranda</a>
             </li>
             <li>
-              <a href="/#show">TV Shows</a>
+              <a href="/#dsad">Tentang Kami</a>
             </li>
             <li>
-              <a href="/#drama">Drama</a>
+              <a href="/galeri">Galeri</a>
             </li>
             <li>
-              <Link to="/bookmark">Bookmark</Link>
+<<<<<<< HEAD
+              <Link to="/bookmark">Berita</Link>
             </li>
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost text-xl">
+          Cendekia
+=======
+              <Link to="/bookmark">Bookmarks</Link>
+            </li>
+          </ul>
+        </div>
+        <Link to="/" className="btn btn-ghost hover:bg-transparent text-xl">
           Watchathon!
+>>>>>>> f331993012bf2a4af7962d1542a15935ed28e894
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a href="/#movies">Movies</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="/#show">TV Shows</a>
+            <a href="/galdsaderi">Tentang Kami</a>
           </li>
           <li>
-            <a href="/#drama">Drama</a>
+            <a href="/galeri">Galeri</a>
           </li>
           <li>
-            <Link to="/bookmark">Bookmark</Link>
+<<<<<<< HEAD
+            <Link to="/bookmark">Berita</Link>
+=======
+            <Link to="/bookmark">Bookmarks</Link>
+>>>>>>> f331993012bf2a4af7962d1542a15935ed28e894
           </li>
         </ul>
       </div>
       <div className="navbar-end">
         <div className="dropdown dropdown-end">
-          <button className="btn btn-ghost btn-circle">
+          <button className="btn btn-ghost btn-circle hover:bg-transparent">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
