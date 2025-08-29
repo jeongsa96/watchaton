@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function Navbar() {
@@ -25,15 +25,23 @@ function Navbar() {
     };
   }, []);
 
+  const navigate = useNavigate();
+
   const handleSearch = (e) => {
     e.preventDefault();
     const searchQuery = e.target.search.value.trim();
     if (!searchQuery) return;
-    try {
-      console.log(searchQuery);
-    } catch (err) {
-      console.log(err);
-    }
+    // Assuming you have a tmdb API key
+    const apiKey = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNzBiYTZlMzBhYThhNmUwNDNkODdiYWI0MGRkOWIxYSIsIm5iZiI6MTc0MjQ2Njk2MC4yNDYsInN1YiI6IjY3ZGJlZjkwMmRiYTY2ODYyNTdmOWM3NCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.MZK5EoLWULZo32YiVKUugo4hCQfRl4kUyovGl6XqJtE";
+    const url = `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${searchQuery}`;
+    // You can use fetch or axios to make a request to the API
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        // Assuming you have a SearchPage component
+        navigate("/search", { state: data });
+      })
+      .catch((error) => console.error(error));
   };
 
   return (
